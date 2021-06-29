@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk8:alpine
+FROM adoptopenjdk/openjdk16:alpine
 RUN apk update
 RUN apk add wget
 RUN mkdir minecraft
