@@ -1,10 +1,14 @@
-FROM adoptopenjdk/openjdk16:alpine
-RUN apk update
-RUN apk add wget
-RUN mkdir minecraft
-RUN cd ./minecraft
-RUN wget https://launcher.mojang.com/v1/objects/0a269b5f2c5b93b1712d0f5dc43b6182b9ab254e/server.jar
-RUN echo "eula=true" > eula.txt
+FROM itzg/minecraft-server:java8
 
-CMD java -Xms1024m -Xmx2048m -jar server.jar nogui
+ENV EULA=TRUE
+ENV VERSION=1.16.5
+ENV TYPE=FORGE
+ENV MODE=creative
+ENV SERVER_NAME="Felix's Forge Minecraft Server"
+ENV PVP=false
+ENV DIFFICULTY=normal
+ENV LEVEL_TYPE=DEFAULT
+ENV OPS=FormableSteak84,AmbigousTuna428
+ENV MEMORY=2G
+
 EXPOSE 25565
