@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  minecraft:
+    image: itzg/minecraft-server:java8
+    ports:
+      - "25565:25565"
+    volumes:
+      - "mc:/data"
+    environment:
+      EULA: "TRUE"
+      VERSION: 1.16.5
+      TYPE: "FORGE"
+      MODE: "creative"
+      SERVER_NAME: "Felix's Forge Minecraft Server"
+      MAX_PLAYERS: 10
+      ENABLE_COMMAND_BLOCK: "true"
+      DIFFICULTY: "normal"
+      LEVEL_TYPE: "DEFAULT"
+      OPS: "FormableSteak84,AmbigousTuna428"
+      WHITELIST: "FormableSteak84,AmbigousTuna428"
+      MEMORY: 2G
+    restart: always
+
+volumes:
+  mc:
