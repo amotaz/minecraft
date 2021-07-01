@@ -20,6 +20,7 @@ services:
       OPS: "FormableSteak84,AmbigousTuna428"
       WHITELIST: "FormableSteak84,AmbigousTuna428"
       MEMORY: 2G
+      MODS: "https://edge.forgecdn.net/files/3278/516/create-mc1.16.5_v0.3.1c.jar,https://edge.forgecdn.net/files/3336/21/obfuscate-0.6.2-1.16.3.jar,https://edge.forgecdn.net/files/3349/156/Space-Bosstools-1.16.5-5.3.jar"
     restart: always
 
 volumes:
